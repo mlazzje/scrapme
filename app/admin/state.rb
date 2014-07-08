@@ -1,4 +1,5 @@
 ActiveAdmin.register State do
+  permit_params :state
 
   
   # See permitted parameters documentation:
