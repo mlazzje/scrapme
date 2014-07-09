@@ -10,15 +10,14 @@ class WebScrapperController < ApplicationController
   end
 
   def scrapping
-  	if params[:url]
-  		url = params[:url]
-  		puts url
-  		#page = Nokogiri::HTML(open(url))
+  	if params[:website]
+  		url = params[:website]["url"]
+  		page = Nokogiri::HTML(open(url, :read_timeout => 10))
   		#puts page.class   # => Nokogiri::HTML::Document
-  		@doc = url
+  		@doc = page.class
   		render :scrapping
   	else
-  		redirect_to "/web_scrapper/index"
+  		redirect_to "/web_scrapper/"
   	end
   end
 end
