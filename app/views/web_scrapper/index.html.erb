@@ -1,0 +1,25 @@
+<div class="container">
+	<h1>WebScrapper#index</h1>
+	<p>Find me in app/views/web_scrapper/index.html.erb</p>
+	<br>
+	<%= form_tag :action => 'scrapping', :method => :post, :role =>"form", :class =>"form-horizontal" do %>
+	<!--<form class="form-horizontal" role="form" accept-charset="UTF-8" action="/web_scrapper/scrapping" method="post">
+		<fieldset>-->
+
+			<!-- Form Name -->
+			<legend>ScrapMe</legend>
+
+			<!-- Text input-->
+			<div class="control-group" style="width:200px;margin:auto;">
+				<label class="control-label" for="url">Website URL</label>
+				<div class="controls">
+					<%= url_field("url") %>
+					<!--<input id="url" name="url" type="text" placeholder="http://www.google.com" class="input-xlarge" required="">-->
+					<p class="help-block">Website's url to scrap!</p>
+				</div>
+			</div>
+
+		</fieldset>
+	<!--</form>-->
+	<% end %>
+</div>
