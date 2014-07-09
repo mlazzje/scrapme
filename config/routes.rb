@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'web_scrapper/index'
+
+  get 'web_scrapper/scrapping'
+
   get 'landings/index'
 
   resources :websites
