@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/web_scrapper/" => "web_scrapper#index"
+  get "/" => "web_scrapper#index"
   get "/web_scrapper/scrapping" => "web_scrapper#index"
   post "/web_scrapper/scrapping" => "web_scrapper#scrapping"
 
