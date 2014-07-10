@@ -21,6 +21,7 @@ class WebScrapperController < ApplicationController
   		@tags = ["title", "h1", "h2", "h3", "h4", "h5", "h6" ]
   		@metas = ["description", "keywords"]
   		@doc = page
+  		@url = url
   		render :scrapping
   	else
   		redirect_to "/web_scrapper/"
