@@ -3,8 +3,25 @@
 <br>
 <h2>Result</h2>
 <% if @doc %>
-<p>Title: <%= @doc.css("title")[0].text %></p>
-<p></p>
+	<h3>Metadatas</h3>
+	<% @metas.each do |meta| %>
+		<p>
+			<%= meta.slice(0,1).capitalize + meta.slice(1..-1)%>:
+			<%= @doc.xpath("//meta[@name='"+meta+"']/@content").first.value %>
+		</p>
+	<% end %>
+	<h3>Tags</h3>
+	<% @tags.each do |tag| %>
+		<p>
+			<%=  tag.slice(0,1).capitalize + tag.slice(1..-1)%>:
+			<% i=0 
+			while i < @doc.css(tag).length %>
+				<%= @doc.css(tag)[i].text %>
+			<% 
+			i+=1
+			end %>
+		</p>
+	<% end %>
 <% else %>
 <p>See error above</p>
 <% end %>

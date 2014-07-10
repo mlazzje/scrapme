@@ -18,6 +18,8 @@ class WebScrapperController < ApplicationController
 		    flash[:alert] = "Timeout due to reading"
 		  end
   		#puts page.class   # => Nokogiri::HTML::Document
+  		@tags = ["title", "h1", "h2", "h3", "h4", "h5", "h6" ]
+  		@metas = ["description", "keywords"]
   		@doc = page
   		render :scrapping
   	else
