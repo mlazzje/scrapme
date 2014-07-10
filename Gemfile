@@ -48,7 +48,7 @@ gem 'spring',        group: :development
 
 gem 'bundler'
 
-gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
+gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'bootstrap_form'
 gem 'binding_of_caller'

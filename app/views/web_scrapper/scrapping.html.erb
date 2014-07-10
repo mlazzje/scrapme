@@ -2,4 +2,9 @@
 <p>Find me in app/views/web_scrapper/scrapping.html.erb</p>
 <br>
 <h2>Result</h2>
-<p><%= @doc %></p>
+<% if @doc %>
+<p>Title: <%= @doc.css("title")[0].text %></p>
+<p></p>
+<% else %>
+<p>See error above</p>
+<% end %>

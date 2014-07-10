@@ -12,12 +12,13 @@
 *
 *= require_tree .
 *= stub active_admin
-*= require rails_bootstrap_forms
 *= require_self
 */
 @import "bootstrap_configuration";
 
 @import "bootstrap";
+
+@import "rails_bootstrap_forms";
 
 //->Prelang (ui_framework:twitter_bootstrap)
 
