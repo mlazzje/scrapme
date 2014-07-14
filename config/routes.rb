@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get "/web_scrapper/" => "web_scrapper#index"
-  get "/" => "web_scrapper#index"
   get "/web_scrapper/scrapping" => "web_scrapper#index"
   post "/web_scrapper/scrapping" => "web_scrapper#scrapping"
 
@@ -18,7 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'web_scrapper#index'
+  root 'landings#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
